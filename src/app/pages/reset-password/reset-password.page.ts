@@ -21,7 +21,9 @@ export class ResetPasswordPage implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.initForm();
+  }
 
   resetPassword(resetPasswordForm: FormGroup) {
     if (resetPasswordForm.valid) {
