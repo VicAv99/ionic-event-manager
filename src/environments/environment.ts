@@ -3,7 +3,15 @@
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: 'AIzaSyDOLoWlQtnygX3JYRqThBOekJibrlUjoUU',
+    authDomain: 'ionic-event-manager-472c8.firebaseapp.com',
+    databaseURL: 'https://ionic-event-manager-472c8.firebaseio.com',
+    projectId: 'ionic-event-manager-472c8',
+    storageBucket: 'ionic-event-manager-472c8.appspot.com',
+    messagingSenderId: '749780065424'
+  }
 };
 
 /*

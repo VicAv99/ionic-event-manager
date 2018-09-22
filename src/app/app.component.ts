@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
 import { Plugins } from '@capacitor/core';
+import * as firebase from 'firebase/app';
+import { environment } from '../environments/environment';
 
 const { SplashScreen, StatusBar } = Plugins;
 
@@ -9,9 +11,9 @@ const { SplashScreen, StatusBar } = Plugins;
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
-  constructor(
-  ) {
+  constructor() {
     this.initializeApp();
+    firebase.initializeApp(environment.firebaseConfig);
   }
 
   initializeApp() {
