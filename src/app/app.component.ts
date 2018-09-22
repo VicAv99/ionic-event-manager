@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
+import { Plugins } from '@capacitor/core';
+
+const { SplashScreen, StatusBar } = Plugins;
 
 @Component({
   selector: 'app-root',
@@ -8,14 +10,17 @@ import { Platform } from '@ionic/angular';
 })
 export class AppComponent {
   constructor(
-    private platform: Platform
   ) {
     this.initializeApp();
   }
 
   initializeApp() {
-    this.platform.ready().then(() => {
+    SplashScreen.hide().catch(err => {
+      console.error('error', err);
+    });
 
+    StatusBar.hide().catch(err => {
+      console.error('error', err);
     });
   }
 }
